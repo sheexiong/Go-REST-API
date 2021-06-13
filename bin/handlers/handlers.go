@@ -82,7 +82,7 @@ func PostProperty(c *gin.Context) {
 	var country models.Country
 	c.Bind(&property)
 
-	if property.PostType == "" && property.PropertyType == "" && property.Addr == "" && property.Bathrooms == 0 && property.UnitSize == 0 {
+	if property.PostType == "" && property.PropertyType == "" && property.Addr == "" && property.Bedrooms == 0 && property.Bathrooms == 0 && property.UnitSize == 0 {
 		// Display error
 		c.JSON(422, gin.H{"error": "Some required fields are empty or wrong"})
 	} else {
@@ -127,7 +127,7 @@ func UpdateProperty(c *gin.Context) {
 	var property models.Property
 	db.First(&property, id)
 
-	if property.PostType != "" && property.PropertyType != "" && property.Addr != "" && property.Bathrooms != 0 && property.UnitSize != 0 {
+	if property.PostType != "" && property.PropertyType != "" && property.Addr != "" && property.Bedrooms != 0 && property.Bathrooms != 0 && property.UnitSize != 0 {
 
 		if property.ID != 0 {
 			var newProperty models.Property
