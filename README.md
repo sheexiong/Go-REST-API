@@ -2,10 +2,14 @@
 
 This project is about a simple GOLANG REST API service with sqlite as database. The project has dockerized, versioning and throttling.
 
-## How to build docker image
+## How to build and run docker image
 
 - use command `docker build -t api .` to build the docker image with a name as api.
-- use command `docker run -it -p 8080:8080 api` to run the docker image.
+- use command `docker run -it -p 8080:8080 api` to run the docker image, then can use the tools like Postman to test the APIs.
+
+## How to run without the docker
+
+- In the terminal, enter `go run main.go` to run the application, then can use the tools like Postman to test the APIs.
 
 ## APIs
 
