@@ -50,7 +50,7 @@ This project is about a simple GOLANG REST API service with sqlite as database. 
 
 2. Create new country (for adding new country in the database)
 
-- `http://localhost:8080/api/v1/property`
+- `http://localhost:8080/api/v1/country`
 - By providing the correct required field in the body of request, it will create new property in database and return the detail of newly created property.
 - If the required field is not fulfiled or incorrect data given (such as not avaialble country), it will return the error message.
   ![Figure 2](images/countryPost.png)
@@ -97,6 +97,7 @@ This project is about a simple GOLANG REST API service with sqlite as database. 
   ![Figure 6](images/throttling.png)
 
 ## Future Improvements
+
 - The application can be adding authentication for certain API operations such as add new country.
 - Introduce the caching to further improve the performance of the quering.
 - Able to support the custom search by filter with field data instead of just by the ID.
